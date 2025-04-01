@@ -4,7 +4,7 @@ A Minecraft mod that allows you to independently set the brightness of any dimen
 
 ## Installation
 
-This mod has been written for Minecraft >= 1.20
+This mod has been written for Minecraft >= 1.19
 
 Get packaged versions from [Modrinth](https://modrinth.com/mod/per-dimension-brightness) or [Curseforge](https://www.curseforge.com/minecraft/mc-mods/per-dimension-brightness)!
 
