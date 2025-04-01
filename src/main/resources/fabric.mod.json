@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "perdimensionbrightness",
+	"version": "${version}",
+	"name": "Per Dimension Brightness Control",
+	"description": "Allows configuring the brightness per dimension",
+	"authors": [
+		"Crendgrim"
+	],
+	"contact": {
+		"sources": "https://github.com/Crendgrim/move-subtitles"
+	},
+	"license": "LGPL-3.0",
+	"icon": "perdimensionbrightness.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"mod.crend.perdimensionbrightness.PerDimensionBrightnessControlMod"
+		]
+	},
+	"mixins": [
+		"perdimensionbrightness.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "${fabric_loader_version_range}",
+		"minecraft": "${minecraft_version_range}",
+		"java": ">=17"
+	}
+}
