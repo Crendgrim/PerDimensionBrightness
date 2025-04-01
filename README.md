@@ -1,18 +1,18 @@
-# Move Subtitles
+# Per Dimension Brightness Control
 
-A Minecraft mod that allows you to move the subtitles to any place on the screen.
+A Minecraft mod that allows you to independently set the brightness of any dimension
 
 ## Installation
 
-This mod has been written for Minecraft >= 1.20.4
+This mod has been written for Minecraft >= 1.20
 
-Get packaged versions from [Modrinth](https://modrinth.com/mod/move-subtitles) or [Curseforge](https://www.curseforge.com/minecraft/mc-mods/move-subtitles)!
+Get packaged versions from [Modrinth](https://modrinth.com/mod/per-dimension-brightness) or [Curseforge](https://www.curseforge.com/minecraft/mc-mods/per-dimension-brightness)!
 
 ## Configuration
 
-The configuration file (created on first launch) contains an "edge" key that can be set to any of `TOP_LEFT`, `TOP`, `TOP_RIGHT`, `LEFT`, `RIGHT`, `BOTTOM_LEFT`, `BOTTOM`, `BOTTOM_RIGHT`.
-You may use the `deltaX` and `deltaY` values to manually tweak positioning relative to the configured edge position.
+To set the brightness in a dimension, simply travel to it and then configure the brightness in the video settings there.
+The brightness will have to be set per dimension.
 
 ## Mod Compatibility
 
-This should be compatible with any other mod. I recommend Toggle Subtitles and Colourful Subtitles.
+This mod should be compatible with Sodium. It might not work with fullbright mods.
