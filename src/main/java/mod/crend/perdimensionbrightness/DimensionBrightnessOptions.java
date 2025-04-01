@@ -31,7 +31,6 @@ public class DimensionBrightnessOptions {
 		register(World.NETHER);
 		register(World.END);
 		load();
-		save();
 	}
 
 	public static void register(RegistryKey<World> world) {
@@ -51,7 +50,12 @@ public class DimensionBrightnessOptions {
 
 	public static SimpleOption<Double> getCurrent() {
 		if (MinecraftClient.getInstance().world == null) return BRIGHTNESS_PER_DIMENSION.get(World.OVERWORLD);
-		return BRIGHTNESS_PER_DIMENSION.get(MinecraftClient.getInstance().world.getRegistryKey());
+		RegistryKey<World> registryKey = MinecraftClient.getInstance().world.getRegistryKey();
+		if (!BRIGHTNESS_PER_DIMENSION.containsKey(registryKey)) {
+			register(registryKey);
+			save();
+		}
+		return BRIGHTNESS_PER_DIMENSION.get(registryKey);
 	}
 
 	public static void load() {
@@ -63,6 +67,7 @@ public class DimensionBrightnessOptions {
 				BRIGHTNESS_PER_DIMENSION.get(registryKey).setValue(config.get(identifier));
 			}
 		} catch (IOException ignored) {
+			save();
 		}
 	}
 	public static void save() {
